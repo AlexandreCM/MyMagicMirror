@@ -43,25 +43,24 @@ let config = {
 		},
 		{
 			module: "clock",
-			position: "top_left",
+			position: "top_center",
+			config: {
+				clockBold: true,
+			},
 		},
 		{
 			module: "calendar",
-			header: "US Holidays",
+			//                      header: "Calendar",
 			position: "top_left",
 			config: {
 				calendars: [
 					{
 						fetchInterval: 7 * 24 * 60 * 60 * 1000,
 						symbol: "calendar-check",
-						url: "https://ics.calendarlabs.com/76/mm3137/US_Holidays.ics",
+						url: "https://ics.calendarlabs.com/635/becc7947/Canada_Post_Holidays.ics",
 					},
 				],
 			},
-		},
-		{
-			module: "compliments",
-			position: "lower_third",
 		},
 		{
 			module: "weather",
@@ -69,19 +68,23 @@ let config = {
 			config: {
 				weatherProvider: "openmeteo",
 				type: "current",
-				lat: 40.776676,
-				lon: -73.971321,
+				lat: 45.5088,
+				lon: -73.5878,
+				appendLocationNameToHeader: false,
 			},
 		},
 		{
 			module: "weather",
 			position: "top_right",
-			header: "Weather Forecast",
 			config: {
 				weatherProvider: "openmeteo",
-				type: "forecast",
-				lat: 40.776676,
-				lon: -73.971321,
+				type: "hourly",
+				lat: 45.5088,
+				lon: -73.5878,
+				fade: false,
+				showPrecipitationAmount: true,
+				showPrecipitationProbability: true,
+				appendLocationNameToHeader: false,
 			},
 		},
 		{
@@ -92,6 +95,10 @@ let config = {
 					{
 						title: "New York Times",
 						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+					},
+					{
+						title: "Korben",
+						url: "https://korben.info/feed",
 					},
 				],
 				showSourceTitle: true,
