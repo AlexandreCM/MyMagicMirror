@@ -8,7 +8,10 @@ The [MagicMirror](https://github.com/MagicMirrorOrg/MagicMirror) application is 
 
 ## Installation
 
-`~/MyMagicMirror/setup.sh`
+```bash
+sudo chmod +x ~/MyMagicMirror/setup.sh
+~/MyMagicMirror/setup.sh
+```
 
 The setup script will install the required dependencies for the MagicMirror application and automatically start the application.
 
