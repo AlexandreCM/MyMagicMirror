@@ -17,7 +17,10 @@ The setup script will install the required dependencies for the MagicMirror appl
 
 ## Apply my own configuration
 
-`~/MyMagicMirror/update-config.sh`
+```bash
+~/MyMagicMirror/update-config.sh
+pm2 restart ~/MyMagicMirror/mm.sh
+```
 
 The update-config script will update the configuration files for the MagicMirror application with my own configuration.
 
