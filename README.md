@@ -6,42 +6,31 @@ This project saves my own configuration files for the MagicMirror application.
 
 The [MagicMirror](https://github.com/MagicMirrorOrg/MagicMirror) application is an open source modular smart mirror platform. It is a modular framework that allows developers to create modules that can be displayed on the smart mirror using a Raspberry Pi.
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Apply my own configuration](#apply-my-own-configuration)
-- [Scripts](#scripts)
-- [Configuration](#configuration)
-
 ## Installation
 
-```sh
-./setup.sh
-```
+`~/MyMagicMirror/setup.sh`
 
 The setup script will install the required dependencies for the MagicMirror application and automatically start the application.
 
 ## Apply my own configuration
 
-```sh
-./update-config.sh
-```
+`~/MyMagicMirror/update-config.sh`
 
 The update-config script will update the configuration files for the MagicMirror application with my own configuration.
 
-## Scripts
+## Commands
 
-- start.sh: Starts the MagicMirror application using PM2.
-- stop.sh: Stops the MagicMirror application using PM2.
-- restart.sh: Restarts the MagicMirror application using PM2.
-- logs.sh: Displays the logs of the MagicMirror application.
-- show.sh: Shows the process information of the MagicMirror application.
-- update-modules.sh: Updates the MagicMirror modules by cloning and pulling the latest changes from the repositories.
-- update-config.sh: Updates the configuration files (My own configuration files).
+- `pm2 start ~/MyMagicMirror/mm.sh`: Start the MagicMirror.
+- `pm2 stop ~/MyMagicMirror/mm.sh`: Stop the MagicMirror.
+- `pm2 restart ~/MyMagicMirror/mm.sh`: Restart the MagicMirror.
+- `pm2 logs ~/MyMagicMirror/mm.sh`: Show the MagicMirror logs.
+- `pm2 show ~/MyMagicMirror/mm.sh`: Show the MagicMirror process information.
+- `~/MyMagicMirror/update-modules.sh`: Updates the MagicMirror modules by cloning and pulling the latest changes from the repositories.
+- `~/MyMagicMirror/update-config.sh`: Updates the configuration files (My own configuration files).
 
 ## Configuration
 
 Configuration files are located in the config/ directory:
 
-- config.js: Main configuration file for the MagicMirror application.
-- custom.css: Custom CSS for styling the MagicMirror application.
+- `config.js`: Main configuration file for the MagicMirror application.
+- `custom.css`: Custom CSS for styling the MagicMirror application.
