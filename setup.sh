@@ -16,10 +16,10 @@ eval $startup_command
 git -C ~ clone https://github.com/MichMich/MagicMirror.git
 
 # Add my modules to the MagicMirror/modules directory
-./update-modules.sh
+~/MyMagicMirror/update-modules.sh
 
 # Apply my configuration to the MagicMirror
-./update-config.sh
+~/MyMagicMirror/update-config.sh
 
 # Install the dependencies
 npm --prefix ~/MagicMirror run install-mm
